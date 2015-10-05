@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 from scipy.integrate import ode
 
 '''
-Vamos a resolver numericamente la ecuacion d2x/dx2 = dx/dt / t - 4 k t*22 x.
+Vamos a resolver numericamente la ecuacion d2x/dx2 = dx/dt / t - 4 k t**2 x.
 La solucion analitica es x(t) = sin(sqrt(k) * t**2)
 '''
 
@@ -52,8 +52,8 @@ y0 = [np.sin(np.sqrt(10) * t0**2),
 
 # creamos el 'resolvedor'
 r = ode(f_to_solve)
-# r.set_integrator('dopri5', max_step=0.1, first_step=0.01)
-r.set_integrator('dopri5')
+r.set_integrator('dopri5', max_step=0.1, first_step=0.01)
+# r.set_integrator('dopri5')
 r.set_initial_value(y0, t0)
 
 # guardamos las variables a medida que progresamos
