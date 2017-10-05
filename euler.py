@@ -45,7 +45,7 @@ ax1.set_ylabel('x')
 # ---------------------------------
 
 def f_a_integrar(t, y, k=K):
-    import pdb; pdb.set_trace()  # XXX BREAKPOINT
+    #import pdb; pdb.set_trace()  # XXX BREAKPOINT
     # Intentar comandos l, s, n dentro del debugger
     x, v = y
     return [v, v / t - 4 * k * t**2 * x]
